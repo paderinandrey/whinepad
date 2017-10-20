@@ -24,9 +24,17 @@ var _FormInput = require('./components/FormInput');
 
 var _FormInput2 = _interopRequireDefault(_FormInput);
 
+var _Form = require('./components/Form');
+
+var _Form2 = _interopRequireDefault(_Form);
+
 var _Logo = require('./components/Logo');
 
 var _Logo2 = _interopRequireDefault(_Logo);
+
+var _Actions = require('./components/Actions');
+
+var _Actions2 = _interopRequireDefault(_Actions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -221,5 +229,20 @@ _reactDom2.default.render(_react2.default.createElement(
         )
       )
     )
+  ),
+  _react2.default.createElement(_Form2.default, {
+    fields: [{ label: 'Rating', type: 'rating', id: 'rateme' }, { label: 'Greeting', id: 'freetext' }],
+    initialData: { rateme: 4, freetext: 'Hello' } }),
+  _react2.default.createElement(
+    'h2',
+    null,
+    'Actions'
+  ),
+  _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_Actions2.default, { onAction: function onAction(type) {
+        return alert(type);
+      } })
   )
 ), document.getElementById('pad'));
